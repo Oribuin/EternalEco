@@ -1,0 +1,26 @@
+name: EternalEco
+main: xyz.oribuin.eternaleco.EternalEco
+version: @version@
+authors: [Oribuin, Esophose]
+api-version: '1.13'
+description: Standalone economy plugin created to make secondary currencies
+website: https://oribuin.xyz/
+softdepend: [PlaceholderAPI]
+commands:
+  eternaleco:
+    description: Main EternalEco Command
+    usage: /eternaleco help
+permissions:
+  eternaleco.*:
+    description: All permissions
+    default: op
+    children:
+      - eternaleco.help
+      - eternaleco.balance
+      - eternaleco.balance.other
+      - eternaleco.reset
+      - eternaleco.reset.other
+      - eternaleco.add
+      - eternaleco.set
+      - eternaleco.remove
+      - eternaleco.reload
